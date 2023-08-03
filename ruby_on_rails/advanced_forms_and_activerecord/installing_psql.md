@@ -47,7 +47,7 @@ We will use an environment variable to set up PostgreSQL credentials for our Rai
 
 ### Installing PostgreSQL
 
-If you've been following the curriculum, you should already have installed all the supporting bits and pieces. If not, please go back and refer to [those lessons](https://www.theodinproject.com/lessons/installation_lessons) before continuing. You'll want to confirm that node.js, Ruby, Rails and yarn are all installed.
+If you've been following the curriculum, you should already have installed all the supporting bits and pieces. If not, please go back and refer to [those lessons](https://www.theodinproject.com/guides/installations) before continuing. You'll want to confirm that node.js, Ruby, Rails and yarn are all installed.
 
 Pick your operating system below to get the appropriate steps for installing PostgreSQL.
 
@@ -107,6 +107,10 @@ Remember that we want the role name to be the same as our Linux user name and be
 One other important step in setting up PostgreSQL is that each role must have its own database of the same name. Without it, the role we just created will not be able to log in or interact with PostgreSQL.
 
 You can try to run `psql` now, but you will get an error that the database does not exist. Not to worry, let's create one to resolve fix this:
+
+<div class="lesson-note" markdown="1">
+  If your username has any capital letters, you must surround it in quotes when running the below command.
+</div>
 
 ~~~bash
 sudo -i -u postgres createdb <linux_username>
@@ -219,6 +223,10 @@ Input `\du`, hit Return, and check that your MacOS username is the listed role n
 #### 3.2 Creating the Role Database
 One other important step in setting up PostgreSQL is that each role must have its own database of the same name. We need this to login as the role matching our username. While still in the PostgreSQL session prompt, type the following command to create the new database. Make sure you include the semicolon.
 
+<div class="lesson-note" markdown="1">
+  If your username has any capital letters, you must surround it in quotes when running the below command.
+</div>
+
 ~~~
 CREATE DATABASE <username>;
 ~~~
@@ -306,6 +314,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 +  username: <role_name> # role previously added
 +  password: <%= ENV['DATABASE_PASSWORD'] %> # variable previously added
+# You must remove the '+' signs to be able to migrate your database
 ~~~
 
 Save the file, and we can see Rails work its magic:

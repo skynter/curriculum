@@ -4,7 +4,7 @@ Introduced in Ruby 2.7, pattern matching uses specified patterns to match agains
 
 With Ruby 3.1, most parts of the pattern matching syntax are no longer considered experimental, so it is now worth ensuring you are familiar with the basics. The syntax can feel a little clunky at first, but there are times it can definitely simplify Ruby code. There are a couple of new patterns with Ruby 3 which we'll introduce at the end.
 
-If you want to play with the examples, make sure you're on at least Ruby 2.7. Unfortunately, at the time of writing, this means you can't use replit.com, as it's still stuck in the dark ages on Ruby 2.5.
+If you want to play with the examples, make sure you're on at least Ruby 2.7 or use replit.com.
 
 ### Learning Outcomes
 
@@ -95,7 +95,28 @@ When we say "pattern", we aren't talking about design patterns which you may hav
 
 ### Return Values
 
-There are two possible return values from a pattern match statement. The first is `true`, which is returned whenever there is a match, even when the match is the else clause in a statement. The second possible return value is a `NoMatchingPatternError` whenever no match can be found. In our examples below, when we `puts` something inside a case statement, we'll use `# =>` to show the value that will be printed by this. In your terminal, though, you'll see the value printed followed by `=> true` below. We'll omit that because it's not relevant to what we're trying to show you. Just be aware that the `true` you see is just the return value of the last thing evaluated. Standard Ruby behaviour.
+There are two possible outcomes for a pattern match statement - either there is a match or there is no match. If there is a match, it will return the last evaluated value in the body of the matching branch. 
+If there are no matches, the pattern matching statement will return `NoMatchingPatternError`.
+Consider the following example, where the variable `result` is assigned the value 3.
+
+~~~ruby
+grade = 'C'
+
+result = case grade
+  in 'A' then 1
+  in 'B' then 2
+  in 'C' then 3
+  else 0
+end
+
+puts result
+#=> 3
+~~~
+
+When we `puts` something inside a case statement, we'll use `#=>` to show what `puts` will print. 
+In your terminal, however, you'll see the value printed followed by `=> nil`, since `puts` returns `nil`. 
+We'll omit that because it's not relevant to what we're trying to show you. 
+Just be aware that the `nil` you see is just the return value of `puts`. Standard Ruby behaviour.
 
 As you'll see, though, the point of a pattern match usually is to not only match against a pattern, but also bind all or part of the match to one or more variables that you can then use outside of the pattern match expression.
 
@@ -647,15 +668,13 @@ Pattern Matching provides a powerful way to get at the data you need in a way th
 ### Assignment
 <div class="lesson-content__panel" markdown="1">
 
-1. Start with the [Ruby docs](https://docs.ruby-lang.org/en/3.0/syntax/pattern_matching_rdoc.html) on pattern matching. They cover quite a lot of ground.
-2. One thing we didn't cover here is matching your own objects. We did mention implementing the `===` method, but there are a couple of other methods you can implement that will allow you to use array and hash pattern matching. Check out this [guide to pattern matching](https://rubyreferences.github.io/rubyref/language/pattern-matching.html), particularly this section on [matching objects](https://rubyreferences.github.io/rubyref/language/pattern-matching.html#matching-non-primitive-objects-deconstruct_keys-and-deconstruct).
+1. Read the [Ruby docs](https://docs.ruby-lang.org/en/3.0/syntax/pattern_matching_rdoc.html) on pattern matching. They cover quite a lot of ground.
 </div>
 
 ### Additional Resources
 This section contains helpful links to other content. It isn't required, so consider it supplemental.
 
 * [An Introduction to Pattern Matching in Ruby](https://blog.appsignal.com/2021/07/28/introduction-to-pattern-matching-in-ruby.html) from AppSignal should be another useful perspective on the material.
-* [Pattern matching](https://rubyreferences.github.io/rubyref/language/pattern-matching.html) from Ruby References (Github) covers some more practical uses
 
 ### Knowledge Check
 This section contains questions for you to check your understanding of this lesson. If you’re having trouble answering the questions below on your own, review the material above to find the answer.

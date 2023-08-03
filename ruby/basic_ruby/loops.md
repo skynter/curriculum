@@ -79,11 +79,11 @@ The next example shows how you can use `until` to avoid the negation `!` that th
 
 ~~~ruby
 until gets.chomp == "yes" do
-  puts "Will you go to prom with me?"
+  puts "Do you like Pizza?"
 end
 ~~~
 
-Much more readable! This code is guaranteed to get you a "yes".
+Much more readable! And who doesn't like Pizza.
 
 ### Ranges
 
@@ -134,9 +134,9 @@ Remember, loops will start counting from a zero index unless specified otherwise
 The Ruby methods `#upto` and `#downto` do exactly what you'd think they do from their names. You can use these methods to iterate from a starting number either up to or down to another number, respectively.
 
 ~~~ruby
-5.upto(10) {|num| print "#{num} " }     #=> 5 6 7 8 9 10
+5.upto(10) { |num| print "#{num} " }     #=> 5 6 7 8 9 10
 
-10.downto(5) {|num| print "#{num} " }   #=> 10 9 8 7 6 5
+10.downto(5) { |num| print "#{num} " }   #=> 10 9 8 7 6 5
 ~~~
 
 If you need to step through a series of numbers (or even letters) within a specific range, then these are the loops for you.

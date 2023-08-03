@@ -1,4 +1,10 @@
-### Lesson Overview
+### Introduction
+
+One of the challenges of programming is dealing with large amounts of data. For example, if you want to store the names of all the students in your class, how would you do it? You could create a variable for each name, but that would be tedious and inefficient. It'll also be hard to manage and update. What if you want to change or access the names later?
+
+Luckily, there is a better way to handle this problem. In this lesson, you’ll learn about arrays, which are data structures that can store multiple values in a single variable. Arrays are very useful for organizing and manipulating large amounts of data. You’ll also learn about loops, which are control structures that allow you to execute a block of code repeatedly. Loops are very handy for performing the same operation on each element of an array. Finally, you’ll be introduced to Test-Driven Development (TDD), which is the practice of writing tests for your code before you write the code itself.
+
+### Lesson overview
 
 This section contains a general overview of topics that you will learn in this lesson.
 
@@ -13,6 +19,7 @@ Strings and numbers may be our building blocks, but as your scripts get more com
 
 1. [This tutorial](https://www.w3schools.com/js/js_arrays.asp) is a great introduction.
 2. [This article](https://www.w3schools.com/js/js_array_methods.asp) covers some of the most useful built-in array methods. These fundamentals are something you'll use every day, so don't rush too much and miss out!
+3. [Web Dev Simplified video](https://www.youtube.com/watch?v=7W4pQQ20nJg) explains an overview of arrays in JavaScript in about 6 minutes.
 
 ### Loops
 
@@ -43,27 +50,27 @@ Follow the steps below to get started. Once you complete Step 1, be sure to use 
     * sumAll
     * leapYears
     * tempConversion
-3. Once you have a working solution, see how it compares to the exercise's given solution. Solutions for the exercises can be found on the ['solutions' branch](https://github.com/TheOdinProject/javascript-exercises/tree/solutions) of the repo.
+3. Once you have a working solution, see how it compares to the exercise's given solution. Solutions for the exercises can be found in the 'solution' folder of each exercise.
 
 </div>
 
-### Additional Resources
-
-This section contains helpful links to related content. It isn’t required, so consider it supplemental.
-
-* It looks like this lesson doesn't have any additional resources yet. Help us expand this section by contributing to our curriculum.
-
-### Knowledge Check
+### Knowledge check
 
 This section contains questions for you to check your understanding of this lesson on your own. If you’re having trouble answering a question, click it and review the material it links to.
 
-* <a class="knowledge-check-link" href="https://www.w3schools.com/js/js_arrays.asp">What is an array?</a>
-* <a class="knowledge-check-link" href="https://www.w3schools.com/js/js_arrays.asp">What are arrays useful for?</a>
-* <a class="knowledge-check-link" href="https://www.w3schools.com/js/js_arrays.asp">How do you access an array element?</a>
-* <a class="knowledge-check-link" href="https://www.w3schools.com/js/js_arrays.asp">How do you change an array element?</a>
-* <a class="knowledge-check-link" href="https://www.w3schools.com/js/js_arrays.asp">What are some useful array properties?</a>
-* <a class="knowledge-check-link" href="https://www.w3schools.com/js/js_array_methods.asp">What are some useful array methods?</a>
-* <a class="knowledge-check-link" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#why_bother">What are loops useful for?</a>
-* <a class="knowledge-check-link" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#exiting_loops_with_break">What is the break statement?</a>
-* <a class="knowledge-check-link" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#skipping_iterations_with_continue">What is the continue statement?</a>
-* <a class="knowledge-check-link" href="#test-driven-development">What is the advantage of writing automated tests?</a>
+- [What is an array?](https://www.w3schools.com/js/js_arrays.asp)
+- [What are arrays useful for?](https://www.w3schools.com/js/js_arrays.asp)
+- [How do you access an array element?](https://www.w3schools.com/js/js_arrays.asp)
+- [How do you change an array element?](https://www.w3schools.com/js/js_arrays.asp)
+- [What are some useful array properties?](https://www.w3schools.com/js/js_arrays.asp)
+- [What are some useful array methods?](https://www.w3schools.com/js/js_array_methods.asp)
+- [What are loops useful for?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#why_bother)
+- [What is the break statement?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#exiting_loops_with_break)
+- [What is the continue statement?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#skipping_iterations_with_continue)
+- [What is the advantage of writing automated tests?](#test-driven-development)
+
+### Additional resources
+
+This section contains helpful links to related content. It isn’t required, so consider it supplemental.
+
+- It looks like this lesson doesn't have any additional resources yet. Help us expand this section by contributing to our curriculum.
